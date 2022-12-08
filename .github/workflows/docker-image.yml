@@ -30,4 +30,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nginx-with-subs-filter:latest
-          build-arg: ENABLED_MODULES="subs-filter"
+          build-args: |
+            ENABLED_MODULES=subs-filter
